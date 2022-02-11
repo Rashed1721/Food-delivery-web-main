@@ -1,7 +1,8 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
+import { Container, Form, Nav } from 'react-bootstrap';
 
 import img from '../../image/Photos and Icons/bg-1.png'
+import Footer from '../Footer/Footer';
 import MainNavbar from '../MainNavbar/MainNavbar';
 const UpdateProfile = () => {
     return (
@@ -22,19 +23,23 @@ const UpdateProfile = () => {
                 <h2 style={{ fontSize: 60, fontweight: 600, color: "white" }}>Update Your Profile</h2>
             </div>
 
-            <div>
+            <Container style={{ marginTop: 100 }}>
+                <Nav.Link style={{ marginBottom: 40, MarginTop: 100, color: 'black' }} href="/#"><h1>Profile</h1></Nav.Link>
+                <hr />
+                <Nav.Link style={{ marginBottom: 40, MarginTop: 60, color: 'black' }} href="/#"><h1>Location</h1></Nav.Link>
+                <hr />
 
-                <Form>
-                    <Form.Group className="mb-3" controlId="formGroupEmail">
-                        <h1>Profile</h1>
-                        <Form.Control style={{ borderColor: "transparent", borderBottom: "2px solid gray" }} type="email" placeholder="Enter email" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formGroupPassword">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password" />
-                    </Form.Group>
-                </Form>
-            </div>
+                <Nav.Link style={{ marginBottom: 40, MarginTop: 60, color: 'black' }} href="/home"><h1>Email  Prefrence</h1></Nav.Link>
+                <hr />
+                <Nav.Link style={{ marginBottom: 40, MarginTop: 60, color: 'black' }} href="/home"><h1>Push Noification  Prefrence</h1></Nav.Link>
+                <hr />
+                <Nav.Link style={{ marginBottom: 40, MarginTop: 60, color: 'black' }} href="/home"><h1>Payment info</h1></Nav.Link>
+                <hr />
+
+
+                <h4 style={{ marginTop: "100px", marginBottom: 100 }}><span style={{ color: "gray" }}>You would like to remove your account? </span>Go To hello@peacd.com</h4>
+                <Footer></Footer>
+            </Container>
         </div>
     );
 };
