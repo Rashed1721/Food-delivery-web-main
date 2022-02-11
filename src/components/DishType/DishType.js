@@ -130,7 +130,7 @@ const DishType = () => {
 
 
                     {/* iteam-1 */}
-                    <div style={{ width: '20%', height: '250px', backgroundColor: 'rgb(223 26 163 / 91%)', marginRight: 30 }}>
+                    <div style={{ width: '250px', height: '250px', backgroundColor: 'rgb(223 26 163 / 91%)', marginRight: 30 }}>
 
                         <div style={{ height: '60%', backgroundColor: '#b5a9a9', }}>
 
@@ -154,7 +154,7 @@ const DishType = () => {
 
                     {/* iteam-2 */}
 
-                    <div style={{ width: '20%', height: '250px', marginBottom: 100, marginLeft: 30 }}>
+                    <div style={{ width: '250px', height: '250px', marginBottom: 100, marginLeft: 30 }}>
 
                         <div style={{ height: '60%', backgroundColor: '#b5a9a9', }}>
 

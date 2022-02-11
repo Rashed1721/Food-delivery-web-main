@@ -13,28 +13,14 @@
     background-color:#0cce87;
     margin-left: -3px;
 }
-.signIn{
-    font-weight: 700;
-    color: #0cce87;
-    border-color: transparent;
-    background-color:#f8f9fb;
-    margin-left: 5px;
-}
-.signUp{
-    font-weight: 700;
-    color: #ffff;
-    border-color: transparent;
-    border-radius: 10px;
-    background-color:#0cce87;
-    margin-left: -3px;
-} */
+ 
 /* /* css */
 .navbar {
     margin-left: 100px;
     background-color:white;
-    height: 110px;
+    height: 102px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     font-size: 1.2rem;
     position: sticky;
@@ -44,7 +30,7 @@
   
   .nav-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: 80px;
@@ -54,7 +40,7 @@
   .nav-logo {
     color: #21f579;
     align-items: center;
-    margin-left: 110px;
+    margin-left: -83px;
     cursor: pointer;
     text-decoration: none;
     /* font-size: 2rem; */
@@ -119,7 +105,9 @@
       opacity: 1;
       transition: all 0.5s ease;
     }
-  
+  .nav-logo{
+      margin-left: 50px;
+  }
     .nav-menu.active {
       background: lightgray;
       left: 0px;

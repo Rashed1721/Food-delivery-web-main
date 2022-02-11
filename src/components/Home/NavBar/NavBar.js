@@ -57,19 +57,19 @@ const NavBar = () => {
 
             <nav className="navbar">
                 <div className="nav-container">
-                    <NavLink exact to="/" className="nav-logo">
+                    <Nav.Link href='/home' className="nav-logo">
                         <img style={{}} src={logo} width="200" height="90" alt="" srcset="" />
-                    </NavLink>
+                    </Nav.Link>
 
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
 
 
 
-                        <li>    <div style={{ backgroundColor: "lightGrey", width: 40, height: 109 }}> <h2> <i style={{ color: '#0cce87', marginTop: 38, }} class="fas fa-map-marker-alt"></i></h2></div></li>
+                        <li style={{ marginTop: '20px' }}>    <div style={{ backgroundColor: "lightGrey", width: 40, height: 100 }}> <h2> <i style={{ color: '#0cce87', marginTop: 34, }} class="fas fa-map-marker-alt"></i></h2></div></li>
 
 
-                        <li>
-                            <div style={{ marginTop: 11 }}>
+                        <li style={{ marginTop: 20 }}>
+                            <div style={{}}>
                                 <Form.Select style={{ width: "200px", height: 100, fontWeight: 550, borderColor: "transparent", fontSize: 20, backgroundColor: "lightGrey", }} defaultValue="Choose...">
                                     <option >Paris</option>
                                     <option>...</option>
@@ -102,7 +102,7 @@ const NavBar = () => {
                             <div style={{ display: "flex", alignItems: 'center', marginTop: 40, }}>
                                 <button onClick={handleShow} style={{ width: 100, fontWeight: 700, height: '40px', borderRadius: 10, color: '#0cce87', borderColor: 'transparent', backgroundColor: 'white' }} className='signIn'>SIGN IN</button>
 
-                                <Nav.Link href="/login"><button style={{ width: 100, fontWeight: 700, height: '40px', borderRadius: 10, backgroundColor: ' #0cce87', color: 'white', borderColor: 'transparent' }} className='signUp'>SIGN UP <i class="fas fa-long-arrow-alt-right"></i></button></Nav.Link>
+                                <Nav.Link href="/login"><button className='signUp'>SIGN UP <i class="fas fa-long-arrow-alt-right"></i></button></Nav.Link>
                             </div>
                         </li>
                     </ul>
@@ -110,7 +110,7 @@ const NavBar = () => {
                         <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
                     </div>
                 </div>
-            </nav>
+            </nav >
 
 
 
