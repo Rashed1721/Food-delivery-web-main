@@ -8,6 +8,7 @@ import FirstSec from '../FirstSec/FirstSec';
 import LearnMore from '../LearnMore/LearnMore';
 import NavBar from '../NavBar/NavBar';
 import PretyCool from '../PretyCool/pretyCool';
+import UpdateProfile from '../../UpdateProfile/UpdateProfile';
 
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
             <DishType></DishType>
             <Shop></Shop>
             <FoodDetail></FoodDetail>
+            <UpdateProfile></UpdateProfile>
 
         </div>
     );

@@ -58,7 +58,7 @@ const NavBar = () => {
             <nav className="navbar">
                 <div className="nav-container">
                     <NavLink exact to="/" className="nav-logo">
-                        <img style={{ marginLeft: 20 }} src={logo} width="200" height="90" alt="" srcset="" />
+                        <img style={{}} src={logo} width="200" height="90" alt="" srcset="" />
                     </NavLink>
 
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
@@ -70,7 +70,7 @@ const NavBar = () => {
 
                         <li>
                             <div style={{ marginTop: 11 }}>
-                                <Form.Select style={{ width: "250px", height: 100, fontWeight: 550, borderColor: "transparent", fontSize: 20, backgroundColor: "lightGrey", }} defaultValue="Choose...">
+                                <Form.Select style={{ width: "200px", height: 100, fontWeight: 550, borderColor: "transparent", fontSize: 20, backgroundColor: "lightGrey", }} defaultValue="Choose...">
                                     <option >Paris</option>
                                     <option>...</option>
                                 </Form.Select>
@@ -80,7 +80,7 @@ const NavBar = () => {
 
 
                         <li>
-                            <h3 style={{ backgroundColor: 'white', marginTop: 35, marginLeft: '10px' }}> <i style={{ color: '#0cce87', }} class="fas fa-search"></i></h3>
+                            <h3 style={{ backgroundColor: 'white', marginTop: 46, marginLeft: '10px' }}> <i style={{ color: '#0cce87', }} class="fas fa-search"></i></h3>
 
                         </li>
 
@@ -99,7 +99,7 @@ const NavBar = () => {
 
                         </li>
                         <li>
-                            <div style={{ display: "flex", alignItems: 'center', marginTop: 20, }}>
+                            <div style={{ display: "flex", alignItems: 'center', marginTop: 40, }}>
                                 <button onClick={handleShow} style={{ width: 100, fontWeight: 700, height: '40px', borderRadius: 10, color: '#0cce87', borderColor: 'transparent', backgroundColor: 'white' }} className='signIn'>SIGN IN</button>
 
                                 <Nav.Link href="/login"><button style={{ width: 100, fontWeight: 700, height: '40px', borderRadius: 10, backgroundColor: ' #0cce87', color: 'white', borderColor: 'transparent' }} className='signUp'>SIGN UP <i class="fas fa-long-arrow-alt-right"></i></button></Nav.Link>
