@@ -99,7 +99,7 @@ const NavBar = () => {
 
                         </li>
                         <li>
-                            <div style={{ display: "flex", alignItems: 'center', marginTop: 20 }}>
+                            <div style={{ display: "flex", alignItems: 'center', marginTop: 20, }}>
                                 <button onClick={handleShow} style={{ width: 100, fontWeight: 700, height: '40px', borderRadius: 10, color: '#0cce87', borderColor: 'transparent', backgroundColor: 'white' }} className='signIn'>SIGN IN</button>
 
                                 <Nav.Link href="/login"><button style={{ width: 100, fontWeight: 700, height: '40px', borderRadius: 10, backgroundColor: ' #0cce87', color: 'white', borderColor: 'transparent' }} className='signUp'>SIGN UP <i class="fas fa-long-arrow-alt-right"></i></button></Nav.Link>
