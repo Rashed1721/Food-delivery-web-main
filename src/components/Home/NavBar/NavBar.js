@@ -7,7 +7,9 @@ import logo from '../../../image/Photos and Icons/logo.png'
 import { Button, Col, Container, Form, FormControl, Modal, Nav, Navbar, NavDropdown, NavLink } from 'react-bootstrap';
 
 const NavBar = () => {
+    const [click, setClick] = useState(false);
 
+    const handleClick = () => setClick(!click);
 
     const [show, setShow] = useState(false);
     const handleShow = () => setShow(true);
@@ -53,48 +55,63 @@ const NavBar = () => {
 
 
 
-            <Navbar style={{ paddingTop: 0, paddingBottom: 0 }} bg="light" expand="lg">
+            <nav className="navbar">
+                <div className="nav-container">
+                    <NavLink exact to="/" className="nav-logo">
+                        <img style={{ marginLeft: 20 }} src={logo} width="200" height="90" alt="" srcset="" />
+                    </NavLink>
 
-                <Container style={{ margin: 'auto' }}>
-                    <Navbar.Brand href="#home"><img src={logo} width='200px' height="100px" alt="" /></Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto" >
-
-
-                            <h3> <i style={{ color: '#0cce87', marginTop: 30, marginLeft: 100 }} class="fas fa-map-marker-alt"></i></h3>
-                            <p style={{ fontSize: 22, marginLeft: 12, marginTop: 27, }}>Paris</p>
-
-                            <h3><i style={{ marginLeft: 100, marginTop: 33 }} class="fas fa-caret-down"></i></h3>
+                    <ul className={click ? "nav-menu active" : "nav-menu"}>
 
 
-                            <Form style={{ borderRight: '2px solid grey', height: '100px', width: '', }} className="d-flex">
-                                <h3 style={{ backgroundColor: 'white', }}> <i style={{ color: '#0cce87', marginTop: 37, marginLeft: 25 }} class="fas fa-search"></i></h3>
+
+                        <li>    <div style={{ backgroundColor: "lightGrey", width: 40, height: 109 }}> <h2> <i style={{ color: '#0cce87', marginTop: 38, }} class="fas fa-map-marker-alt"></i></h2></div></li>
+
+
+                        <li>
+                            <div style={{ marginTop: 11 }}>
+                                <Form.Select style={{ width: "250px", height: 100, fontWeight: 550, borderColor: "transparent", fontSize: 20, backgroundColor: "lightGrey", }} defaultValue="Choose...">
+                                    <option >Paris</option>
+                                    <option>...</option>
+                                </Form.Select>
+                            </div>
+                        </li>
+
+
+
+                        <li>
+                            <h3 style={{ backgroundColor: 'white', marginTop: 35, marginLeft: '10px' }}> <i style={{ color: '#0cce87', }} class="fas fa-search"></i></h3>
+
+                        </li>
+
+
+                        <li style={{ marginTop: 10 }}>
+
+                            <Form style={{ borderRight: '2px solid grey', marginTop: '0px' }} className="d-flex">
                                 <FormControl
-                                    style={{ borderColor: 'transparent', width: '100%' }}
+                                    style={{ borderColor: 'transparent', height: '100px', width: 200 }}
                                     type="search"
                                     placeholder="your company"
                                     className="me-2"
                                     aria-label="Search"
                                 />
-
                             </Form>
 
+                        </li>
+                        <li>
+                            <div style={{ display: "flex", alignItems: 'center', marginTop: 20 }}>
+                                <button onClick={handleShow} style={{ width: 100, fontWeight: 700, height: '40px', borderRadius: 10, color: '#0cce87', borderColor: 'transparent', backgroundColor: 'white' }} className='signIn'>SIGN IN</button>
 
-
-
-                            <div style={{ display: "flex", alignItems: 'center', marginLeft: 30 }}>
-                                <button style={{ width: 100, fontWeight: 700, height: '40px', borderRadius: 10 }} onClick={handleShow} className='signIn'>SIGN IN</button>
-                                <Nav.Link href="/login"><button style={{ width: 100, fontWeight: 700, height: '40px', borderRadius: 10 }} className='signUp'>SIGN UP <i class="fas fa-long-arrow-alt-right"></i></button></Nav.Link>
+                                <Nav.Link href="/login"><button style={{ width: 100, fontWeight: 700, height: '40px', borderRadius: 10, backgroundColor: ' #0cce87', color: 'white', borderColor: 'transparent' }} className='signUp'>SIGN UP <i class="fas fa-long-arrow-alt-right"></i></button></Nav.Link>
                             </div>
+                        </li>
+                    </ul>
+                    <div className="nav-icon" onClick={handleClick}>
+                        <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
+                    </div>
+                </div>
+            </nav>
 
-
-
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-
-            </Navbar>
 
 
         </div >
