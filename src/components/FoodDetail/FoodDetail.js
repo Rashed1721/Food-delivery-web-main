@@ -38,8 +38,12 @@ const FoodDetail = () => {
                         <p style={{ color: 'grey', fontSize: 20 }}>Place your pre-order for wednesday,Fed 2nd below</p>
 
                         <div className='food-button'>
-                            <Button style={{ backgroundColor: '#51b855', borderColor: 'transparent', width: '200px' }}><h4 style={{}}>PLACE ORDER</h4></Button>
-                            <Button style={{ backgroundColor: 'white', color: 'red', border: '2px solid red', width: '200px', marginLeft: 40 }}><h4>CANCEL</h4></Button>
+
+                            <Button style={{ backgroundColor: '#51b855', borderColor: 'transparent', width: '200px', marginBottom: 10, marginRight: 40 }}><h4 style={{}}>PLACE ORDER</h4></Button>
+
+
+                            <Button className='food-button-2' style={{ backgroundColor: 'white', color: 'red', border: '2px solid red', width: '200px', }}><h4>CANCEL</h4></Button>
+
                         </div>
                     </div>
 

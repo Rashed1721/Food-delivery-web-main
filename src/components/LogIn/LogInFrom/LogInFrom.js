@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Button, Col, Container, Form, Nav, Navbar, NavLink, Modal, ProgressBar, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, Nav, NavLink, Modal, Row, ProgressBar, } from 'react-bootstrap';
 import Footer from '../../Footer/Footer';
 import logo from '../../../image/Photos and Icons/logo.png';
 
@@ -12,7 +12,9 @@ const LogInFrom = () => {
 
     const handleClose = () => setShow(false);
 
-
+    const func = () => {
+        console.log("rashed")
+    }
     const [fromStep, setFromStep] = useState(0)
 
 
@@ -79,7 +81,7 @@ const LogInFrom = () => {
 
                                 <Button style={{ width: '80%', backgroundImage: " linear-Gradient( to right, #0cce87, #51b855)", margin: "20px", marginLeft: '40px' }}
                                     onClick={handleClose}
-                                >CONNEXION</Button>
+                                >CONNEXIN</Button>
 
 
                                 <p style={{ textAlign: 'center' }}>Dont have a peace account?</p>
@@ -124,25 +126,55 @@ const LogInFrom = () => {
                         </div>
 
 
-                        {/* <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>SIGN UP</h4>
-                        <hr /> */}
+                        <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>SIGN UP</h4>
 
-                        {/* <div>
 
+
+
+                        <div>
+
+                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                <div> <h6 style={{ fontWeight: 700, }}>SELECT ADDRESS</h6></div>
+                                <div><h6 style={{ fontWeight: 700, }}> CREATE ACCOUNT</h6></div>
+                                <div> <h6 style={{ fontWeight: 700, }}>ADD PHONE NUMBER</h6></div>
+                                <div><h6 style={{ fontWeight: 700, }}>ADD PAYMENT</h6></div>
+
+                            </div>
+
+                            {
+                                fromStep === 0 && (
+                                    <ProgressBar variant="success" now={0} />
+                                )
+                            }
 
                             {
                                 fromStep === 1 && (
-                                    <ProgressBar variant="success" now={10} />
+                                    <ProgressBar variant="success" now={33} />
                                 )
                             }
-
                             {
                                 fromStep === 2 && (
-                                    <ProgressBar variant="success" now={20} />
+                                    <ProgressBar variant="success" now={66} />
+                                )
+                            }
+                            {
+                                fromStep === 3 && (
+                                    <ProgressBar variant="success" now={66} />
+                                )
+                            }
+                            {
+                                fromStep === 4 && (
+                                    <ProgressBar variant="success" now={66} />
+                                )
+                            }
+                            {
+                                fromStep === 5 && (
+                                    <ProgressBar variant="success" now={95} />
                                 )
                             }
 
-                        </div> */}
+                        </div>
+
 
                     </div>
 
@@ -150,8 +182,8 @@ const LogInFrom = () => {
                         fromStep === 0 && (
 
                             <>
-                                <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>SIGN UP</h4>
-                                <hr />
+                                {/* <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>SIGN UP</h4>
+                                <hr /> */}
 
 
                                 <h3 style={{ fontWeight: '700', marginTop: '80px' }}> What is your address?</h3>
@@ -177,8 +209,8 @@ const LogInFrom = () => {
                         fromStep === 1 && (
                             <div>
 
-                                <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>SIGN UP</h4>
-                                <hr />
+                                {/* <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>SIGN UP</h4>
+                                <hr /> */}
                                 <h4 style={{ marginTop: '70px', fontWeight: '700' }}>We coudn't find any companies at that address</h4>
                                 <p>peach delivers directly to your office,tell us more about your company so we can setup <br /> your building nota a building administrator?Thats alright!Any employee can the first to <br />
                                     Sign-up at their office!
@@ -221,8 +253,8 @@ const LogInFrom = () => {
                         fromStep === 2 && (
                             <div>
 
-                                <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>SIGN UP</h4>
-                                <hr />
+                                {/* <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>SIGN UP</h4>
+                                <hr /> */}
                                 <h4 style={{ marginTop: '70px', fontWeight: '700' }} >Create Your Account</h4>
 
 
@@ -238,9 +270,10 @@ const LogInFrom = () => {
                                         <Form.Control style={{ padding: '12px', border: '2px solid grey', width: '100%', height: 60, margin: ' auto' }} type="text" />
                                         <h6 style={{ textAlign: 'left', marginTop: 0, fontWeight: 700 }}>PASSWORD</h6>
                                         <Form.Control style={{ padding: '12px', border: '2px solid grey', width: '100%', height: 60, margin: ' auto' }} type="text" />
-                                        {/* <p>Don't know your company's address? <span style={{ color: '#0cce87' }}>search by company name</span></p> */}
+                                        <p>Don't know your company's address? <span style={{ color: '#0cce87' }}>search by company name</span></p>
 
                                     </Form.Group>
+
                                     <Form.Check type="checkbox" label="i agree to the terms of service and privacy police" /> <p></p>
                                     <Button onClick={handleCreateAccount} style={{ width: '60%', height: '70px', backgroundImage: " linear-Gradient( to right, #0cce87, #51b855)", margin: "20px" }}
 
@@ -263,8 +296,8 @@ const LogInFrom = () => {
                         fromStep === 3 && (
                             <div>
 
-                                <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>SIGN UP</h4>
-                                <hr />
+                                {/* <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>SIGN UP</h4>
+                                <hr /> */}
                                 <h4 style={{ marginTop: '70px', fontWeight: '700' }}>Validate Your Phone Number</h4>
                                 <p>To Varivey your number please provide us your validation code</p>
 
@@ -299,8 +332,8 @@ const LogInFrom = () => {
                         fromStep === 4 && (
                             <div>
 
-                                <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>S'INSCRIRE</h4>
-                                <hr />
+                                {/* <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>S'INSCRIRE</h4>
+                                <hr /> */}
                                 <h4 style={{ marginTop: '70px', fontWeight: '700' }}>Enter Your Credit Card below</h4>
 
 
@@ -356,8 +389,8 @@ const LogInFrom = () => {
                         fromStep === 5 && (
                             <>
 
-                                <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>SIGN UP</h4>
-                                <hr />
+                                {/* <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>SIGN UP</h4>
+                                <hr /> */}
                                 <div style={{ width: '60%', margin: 'auto' }}>
 
                                     <Form.Group className="mb-3" controlId="formGroupPassword">

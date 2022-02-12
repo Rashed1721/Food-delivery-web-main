@@ -96,17 +96,22 @@
   @media screen and (max-width: 960px) {
     .nav-menu {
       display: flex;
+      align-items: center;
+      justify-content: center;
       flex-direction: column;
       width: 100%;
       border-top: 1pxsolid #fff;
       position: absolute;
-      top: 80px;
-      left: -150%;
+      top: 100px;
+      left: 150%;
       opacity: 1;
       transition: all 0.5s ease;
     }
+    .li1{
+      display: none;
+    }
   .nav-logo{
-      margin-left: 50px;
+      /* margin-left: 0px; */
   }
     .nav-menu.active {
       background: lightgray;

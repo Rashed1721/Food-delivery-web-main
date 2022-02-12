@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavBar.css'
 import logo from '../../../image/Photos and Icons/logo.png'
@@ -7,6 +7,17 @@ import logo from '../../../image/Photos and Icons/logo.png'
 import { Button, Col, Container, Form, FormControl, Modal, Nav, Navbar, NavDropdown, NavLink } from 'react-bootstrap';
 
 const NavBar = () => {
+
+    const [singnUpEmail, setSignUpEmil] = useState({})
+    const [singnUpPassWord, setSignUpPassWord] = useState('')
+
+    const emailRef = useRef('');
+    const passwordfRef = useRef('');
+
+
+
+
+
     const [click, setClick] = useState(false);
 
     const handleClick = () => setClick(!click);
@@ -14,7 +25,32 @@ const NavBar = () => {
     const [show, setShow] = useState(false);
     const handleShow = () => setShow(true);
 
-    const handleClose = () => setShow(false);
+
+    const handleClose = () => {
+
+        setShow(false);
+    }
+
+    const submitForm = (e) => {
+        const email = emailRef.current.value;
+        let newEmail = { ...singnUpEmail }
+        newEmail.email = email;
+        console.log(email);
+        setSignUpEmil(newEmail)
+        console.log(singnUpEmail)
+        const password = passwordfRef.current.value;
+        setSignUpPassWord(password);
+        // console.log(singnUpPassWord);
+
+    }
+
+
+
+    const Klick = (e) => {
+
+        submitForm()
+        handleClose()
+    }
 
     return (
         <div>
@@ -31,17 +67,17 @@ const NavBar = () => {
                         <Form style={{ padding: "20px" }}>
                             <Form.Group className="mb-3" controlId="formGroupEmail">
                                 <Form.Label><h6>Email  or phone Number</h6></Form.Label>
-                                <Form.Control style={{ padding: '12px', border: '2px solid grey', borderRadius: '10px' }} type="email" placeholder="you@example.com" />
+                                <Form.Control ref={emailRef} style={{ padding: '12px', border: '2px solid grey', borderRadius: '10px' }} type="email" placeholder="you@example.com" />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formGroupPassword">
                                 <Form.Label><h6>Password</h6></Form.Label>
-                                <Form.Control style={{ padding: '12px', border: '2px solid grey', borderRadius: '10px' }} type="password" placeholder="Enter 6 charecter or more" />
+                                <Form.Control ref={passwordfRef} style={{ padding: '12px', border: '2px solid grey', borderRadius: '10px' }} type="password" placeholder="Enter 6 charecter or more" />
                             </Form.Group>
                             <NavLink href="/passwordreset">  <h6 style={{ color: 'red' }}>ForgetPasword?</h6></NavLink>
                             <Form.Check type="checkbox" label="Rembember me" />
 
                             <Button style={{ width: '80%', backgroundImage: " linear-Gradient( to right, #0cce87, #51b855)", margin: "20px", marginLeft: '40px' }}
-                                onClick={handleClose}
+                                onClick={Klick}
                             >CONNEXION</Button>
 
 
@@ -65,12 +101,12 @@ const NavBar = () => {
 
 
 
-                        <li style={{ marginTop: '20px' }}>    <div style={{ backgroundColor: "lightGrey", width: 40, height: 100 }}> <h2> <i style={{ color: '#0cce87', marginTop: 34, }} class="fas fa-map-marker-alt"></i></h2></div></li>
+                        <li className='li1' style={{ marginTop: '20px' }}>    <div style={{ backgroundColor: "white", width: 40, height: 100 }}> <h2> <i style={{ color: '#0cce87', marginTop: 34, }} class="fas fa-map-marker-alt"></i></h2></div></li>
 
 
-                        <li style={{ marginTop: 20 }}>
+                        <li className='li1' style={{ marginTop: 20 }}>
                             <div style={{}}>
-                                <Form.Select style={{ width: "200px", height: 100, fontWeight: 550, borderColor: "transparent", fontSize: 20, backgroundColor: "lightGrey", }} defaultValue="Choose...">
+                                <Form.Select style={{ width: "200px", height: 100, fontWeight: 550, borderColor: "transparent", fontSize: 20, backgroundColor: "white", }} defaultValue="Choose...">
                                     <option >Paris</option>
                                     <option>...</option>
                                 </Form.Select>
@@ -79,13 +115,13 @@ const NavBar = () => {
 
 
 
-                        <li>
+                        <li className='li1'>
                             <h3 style={{ backgroundColor: 'white', marginTop: 46, marginLeft: '10px' }}> <i style={{ color: '#0cce87', }} class="fas fa-search"></i></h3>
 
                         </li>
 
 
-                        <li style={{ marginTop: 10 }}>
+                        <li className='li1' style={{ marginTop: 10 }}>
 
                             <Form style={{ borderRight: '2px solid grey', marginTop: '0px' }} className="d-flex">
                                 <FormControl
