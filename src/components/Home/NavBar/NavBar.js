@@ -93,9 +93,11 @@ const NavBar = () => {
 
             <nav className="navbar">
                 <div className="nav-container">
+
                     <Nav.Link href='/home' className="nav-logo">
                         <img style={{}} src={logo} width="200" height="90" alt="" srcset="" />
                     </Nav.Link>
+
 
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
 
@@ -135,16 +137,16 @@ const NavBar = () => {
 
                         </li>
                         <li>
-                            <div style={{ display: "flex", alignItems: 'center', marginTop: 40, }}>
+                            <div className='button-class' style={{ display: "flex", alignItems: 'center', marginTop: 40, }}>
                                 <button onClick={handleShow} style={{ width: 114, fontWeight: 700, height: '40px', borderRadius: 10, color: '#0cce87', borderColor: 'transparent', backgroundColor: 'white' }} className='signIn'>SIGN IN</button>
 
                                 <Nav.Link href="/login"><button className='signUp' style={{ width: 120 }}>SIGN UP <i class="fas fa-long-arrow-alt-right"></i></button></Nav.Link>
                             </div>
                         </li>
                     </ul>
-                    <div className="nav-icon" onClick={handleClick}>
+                    {/* <div className="nav-icon" onClick={handleClick}>
                         <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
-                    </div>
+                    </div> */}
                 </div>
             </nav >
 

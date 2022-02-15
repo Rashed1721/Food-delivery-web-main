@@ -39,8 +39,12 @@ const LogInFrom = () => {
 
     }
 
-    const handlePhoneNumber = () => {
+    const EnterPhoneNumber = () => {
         setFromStep(4);
+    }
+
+    const handlePhoneNumber = () => {
+        setFromStep(5);
     }
 
 
@@ -293,7 +297,7 @@ const LogInFrom = () => {
                     }
 
                     {
-                        fromStep === 3 && (
+                        fromStep === 4 && (
                             <div>
 
                                 {/* <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>SIGN UP</h4>
@@ -329,7 +333,7 @@ const LogInFrom = () => {
                     }
 
                     {
-                        fromStep === 4 && (
+                        fromStep === 5 && (
                             <div>
 
                                 {/* <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>S'INSCRIRE</h4>
@@ -386,7 +390,7 @@ const LogInFrom = () => {
                     }
 
                     {
-                        fromStep === 5 && (
+                        fromStep === 3 && (
                             <>
 
                                 {/* <h4 style={{ textAlign: 'left', marginBottom: '60px', marginTop: '40px' }}>SIGN UP</h4>
@@ -438,7 +442,7 @@ const LogInFrom = () => {
                                     </div>
                                     <p style={{ textAlign: 'left' }}>you can change this option later in your profile</p>
 
-                                    <Button style={{ width: 300, height: '70px', backgroundImage: " linear-Gradient( to right, #0cce87, #51b855)", margin: "20px", marginLeft: '40px', marginBottom: '80px' }}
+                                    <Button onClick={EnterPhoneNumber} style={{ width: 300, height: '70px', backgroundImage: " linear-Gradient( to right, #0cce87, #51b855)", margin: "20px", marginLeft: '40px', marginBottom: '80px' }}
 
                                     ><h4>CONTINUE</h4></Button>
 

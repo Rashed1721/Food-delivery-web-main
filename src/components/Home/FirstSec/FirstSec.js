@@ -4,6 +4,9 @@ import bg from '../../../image/Photos and Icons/bg.png'
 import bg1 from '../../../image/Photos and Icons/bg-1.png'
 import phone from '../../../image/Photos and Icons/phone.png'
 import salad from '../../../image/Photos and Icons/salad.png'
+import img1 from '../../../image/Photos and Icons/android-google.jpg'
+import img2 from '../../../image/Photos and Icons/images.jpg'
+import { Nav } from 'react-bootstrap';
 // import { Button } from 'react-bootstrap';
 
 
@@ -43,6 +46,37 @@ const FirstSec = () => {
                         </div>
 
                         <input className='input' style={{ width: '70%', height: 35, borderColor: 'transparent', borderRadius: 6, marginTop: 20 }} type="text" placeholder='ENTER YOUR LOCATION TO SEE THE MENU TODAY' />
+
+                        <div style={{ display: 'flex', marginTop: 15 }}>
+                            <div style={{ width: "33%", borderTop: '2px solid white', marginTop: 10 }}>
+
+                            </div>
+                            <div>
+                                <h5>OR</h5>
+                            </div>
+                            <div style={{ width: "30%", borderTop: '2px solid white', marginTop: 10 }}>
+
+                            </div>
+                        </div>
+
+                        <div className='download-div' style={{ display: 'flex' }}>
+                            <div style={{ width: "33%" }}>
+                                <h6>Download the
+                                    app today</h6>
+                            </div>
+                            <div style={{ display: 'flex' }}>
+                                <div>
+                                    <Nav.Link href="/home">
+                                        <img src={img1} width="100px" alt="" />
+                                    </Nav.Link>
+                                </div>
+                                <div >
+                                    <Nav.Link href="/home">
+                                        <img src={img2} width="100px" alt="" />
+                                    </Nav.Link>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
