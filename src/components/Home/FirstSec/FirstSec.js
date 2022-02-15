@@ -60,7 +60,7 @@ const FirstSec = () => {
                         </div>
 
                         <div className='download-div' style={{ display: 'flex' }}>
-                            <div style={{ width: "33%" }}>
+                            <div style={{ marginTop: 10 }}>
                                 <h6>Download the
                                     app today</h6>
                             </div>
